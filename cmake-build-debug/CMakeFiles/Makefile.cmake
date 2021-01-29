@@ -48,6 +48,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/bit_single1.dir/DependInfo.cmake"
   "CMakeFiles/dsa.dir/DependInfo.cmake"
   "CMakeFiles/bit_countSetBits.dir/DependInfo.cmake"
   "CMakeFiles/bit_swapTwoNums.dir/DependInfo.cmake"

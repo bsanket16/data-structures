@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /home/bsankt/CLionProjects/dsa/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/bit_single1.dir/all
 all: CMakeFiles/dsa.dir/all
 all: CMakeFiles/bit_countSetBits.dir/all
 all: CMakeFiles/bit_swapTwoNums.dir/all
@@ -86,6 +87,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/bit_single1.dir/clean
 clean: CMakeFiles/dsa.dir/clean
 clean: CMakeFiles/bit_countSetBits.dir/clean
 clean: CMakeFiles/bit_swapTwoNums.dir/clean
@@ -94,13 +96,40 @@ clean: CMakeFiles/bit_numBitsSwap.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/bit_single1.dir
+
+# All Build rule for target.
+CMakeFiles/bit_single1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target bit_single1"
+.PHONY : CMakeFiles/bit_single1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bit_single1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bit_single1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/bit_single1.dir/rule
+
+# Convenience name for target.
+bit_single1: CMakeFiles/bit_single1.dir/rule
+
+.PHONY : bit_single1
+
+# clean rule for target.
+CMakeFiles/bit_single1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/clean
+.PHONY : CMakeFiles/bit_single1.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/dsa.dir
 
 # All Build rule for target.
 CMakeFiles/dsa.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target dsa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target dsa"
 .PHONY : CMakeFiles/dsa.dir/all
 
 # Build rule for subdir invocation for target.
@@ -154,7 +183,7 @@ CMakeFiles/bit_countSetBits.dir/clean:
 CMakeFiles/bit_swapTwoNums.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target bit_swapTwoNums"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target bit_swapTwoNums"
 .PHONY : CMakeFiles/bit_swapTwoNums.dir/all
 
 # Build rule for subdir invocation for target.

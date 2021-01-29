@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bit_single1
+
+# Build rule for target.
+bit_single1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bit_single1
+.PHONY : bit_single1
+
+# fast build rule for target.
+bit_single1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/build
+.PHONY : bit_single1/fast
+
+#=============================================================================
 # Target rules for targets named dsa
 
 # Build rule for target.
@@ -236,6 +249,33 @@ bit_manipulation/num_bits_swap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/bit_manipulation/num_bits_swap.cpp.s
 .PHONY : bit_manipulation/num_bits_swap.cpp.s
 
+bit_manipulation/single_1.o: bit_manipulation/single_1.cpp.o
+
+.PHONY : bit_manipulation/single_1.o
+
+# target to build an object file
+bit_manipulation/single_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/bit_manipulation/single_1.cpp.o
+.PHONY : bit_manipulation/single_1.cpp.o
+
+bit_manipulation/single_1.i: bit_manipulation/single_1.cpp.i
+
+.PHONY : bit_manipulation/single_1.i
+
+# target to preprocess a source file
+bit_manipulation/single_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/bit_manipulation/single_1.cpp.i
+.PHONY : bit_manipulation/single_1.cpp.i
+
+bit_manipulation/single_1.s: bit_manipulation/single_1.cpp.s
+
+.PHONY : bit_manipulation/single_1.s
+
+# target to generate assembly for a file
+bit_manipulation/single_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_single1.dir/build.make CMakeFiles/bit_single1.dir/bit_manipulation/single_1.cpp.s
+.PHONY : bit_manipulation/single_1.cpp.s
+
 bit_manipulation/swap_two_num.o: bit_manipulation/swap_two_num.cpp.o
 
 .PHONY : bit_manipulation/swap_two_num.o
@@ -300,6 +340,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bit_countSetBits"
 	@echo "... bit_numBitsSwap"
+	@echo "... bit_single1"
 	@echo "... bit_swapTwoNums"
 	@echo "... dsa"
 	@echo "... bit_manipulation/count_set_bits.o"
@@ -308,6 +349,9 @@ help:
 	@echo "... bit_manipulation/num_bits_swap.o"
 	@echo "... bit_manipulation/num_bits_swap.i"
 	@echo "... bit_manipulation/num_bits_swap.s"
+	@echo "... bit_manipulation/single_1.o"
+	@echo "... bit_manipulation/single_1.i"
+	@echo "... bit_manipulation/single_1.s"
 	@echo "... bit_manipulation/swap_two_num.o"
 	@echo "... bit_manipulation/swap_two_num.i"
 	@echo "... bit_manipulation/swap_two_num.s"
