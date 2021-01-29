@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/bsankt/CLionProjects/dsa/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/bsankt/Downloads/clion-2020.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -97,6 +86,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/bsankt/Downloads/clion-2020.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named dsa
+
+# Build rule for target.
+dsa: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsa
+.PHONY : dsa
+
+# fast build rule for target.
+dsa/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
+.PHONY : dsa/fast
+
+#=============================================================================
 # Target rules for targets named bit_countSetBits
 
 # Build rule for target.
@@ -144,17 +157,17 @@ bit_countSetBits/fast:
 .PHONY : bit_countSetBits/fast
 
 #=============================================================================
-# Target rules for targets named dsa
+# Target rules for targets named bit_swapTwoNums
 
 # Build rule for target.
-dsa: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsa
-.PHONY : dsa
+bit_swapTwoNums: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bit_swapTwoNums
+.PHONY : bit_swapTwoNums
 
 # fast build rule for target.
-dsa/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
-.PHONY : dsa/fast
+bit_swapTwoNums/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/build
+.PHONY : bit_swapTwoNums/fast
 
 bit_manipulation/count_set_bits.o: bit_manipulation/count_set_bits.cpp.o
 
@@ -182,6 +195,33 @@ bit_manipulation/count_set_bits.s: bit_manipulation/count_set_bits.cpp.s
 bit_manipulation/count_set_bits.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/bit_manipulation/count_set_bits.cpp.s
 .PHONY : bit_manipulation/count_set_bits.cpp.s
+
+bit_manipulation/swap_two_num.o: bit_manipulation/swap_two_num.cpp.o
+
+.PHONY : bit_manipulation/swap_two_num.o
+
+# target to build an object file
+bit_manipulation/swap_two_num.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/bit_manipulation/swap_two_num.cpp.o
+.PHONY : bit_manipulation/swap_two_num.cpp.o
+
+bit_manipulation/swap_two_num.i: bit_manipulation/swap_two_num.cpp.i
+
+.PHONY : bit_manipulation/swap_two_num.i
+
+# target to preprocess a source file
+bit_manipulation/swap_two_num.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/bit_manipulation/swap_two_num.cpp.i
+.PHONY : bit_manipulation/swap_two_num.cpp.i
+
+bit_manipulation/swap_two_num.s: bit_manipulation/swap_two_num.cpp.s
+
+.PHONY : bit_manipulation/swap_two_num.s
+
+# target to generate assembly for a file
+bit_manipulation/swap_two_num.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/bit_manipulation/swap_two_num.cpp.s
+.PHONY : bit_manipulation/swap_two_num.cpp.s
 
 main.o: main.cpp.o
 
@@ -219,10 +259,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bit_countSetBits"
+	@echo "... bit_swapTwoNums"
 	@echo "... dsa"
 	@echo "... bit_manipulation/count_set_bits.o"
 	@echo "... bit_manipulation/count_set_bits.i"
 	@echo "... bit_manipulation/count_set_bits.s"
+	@echo "... bit_manipulation/swap_two_num.o"
+	@echo "... bit_manipulation/swap_two_num.i"
+	@echo "... bit_manipulation/swap_two_num.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
