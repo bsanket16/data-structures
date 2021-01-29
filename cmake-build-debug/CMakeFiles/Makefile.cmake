@@ -51,4 +51,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/dsa.dir/DependInfo.cmake"
   "CMakeFiles/bit_countSetBits.dir/DependInfo.cmake"
   "CMakeFiles/bit_swapTwoNums.dir/DependInfo.cmake"
+  "CMakeFiles/bit_numBitsSwap.dir/DependInfo.cmake"
   )

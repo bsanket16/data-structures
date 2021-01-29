@@ -27,6 +27,16 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bsankt/CLionProjects/dsa/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="dsa">
 				<Option output="/home/bsankt/CLionProjects/dsa/cmake-build-debug/dsa" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/bsankt/CLionProjects/dsa/cmake-build-debug"/>
@@ -159,11 +169,45 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="bit_numBitsSwap">
+				<Option output="/home/bsankt/CLionProjects/dsa/cmake-build-debug/bit_numBitsSwap" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/bsankt/CLionProjects/dsa/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 bit_numBitsSwap"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bit_numBitsSwap/fast">
+				<Option output="/home/bsankt/CLionProjects/dsa/cmake-build-debug/bit_numBitsSwap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bsankt/CLionProjects/dsa/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 bit_numBitsSwap/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bsankt/CLionProjects/dsa/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -172,6 +216,9 @@
 		</Build>
 		<Unit filename="/home/bsankt/CLionProjects/dsa/bit_manipulation/count_set_bits.cpp">
 			<Option target="bit_countSetBits"/>
+		</Unit>
+		<Unit filename="/home/bsankt/CLionProjects/dsa/bit_manipulation/num_bits_swap.cpp">
+			<Option target="bit_numBitsSwap"/>
 		</Unit>
 		<Unit filename="/home/bsankt/CLionProjects/dsa/bit_manipulation/swap_two_num.cpp">
 			<Option target="bit_swapTwoNums"/>

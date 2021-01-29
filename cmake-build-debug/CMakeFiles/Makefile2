@@ -76,6 +76,7 @@ CMAKE_BINARY_DIR = /home/bsankt/CLionProjects/dsa/cmake-build-debug
 all: CMakeFiles/dsa.dir/all
 all: CMakeFiles/bit_countSetBits.dir/all
 all: CMakeFiles/bit_swapTwoNums.dir/all
+all: CMakeFiles/bit_numBitsSwap.dir/all
 
 .PHONY : all
 
@@ -88,6 +89,7 @@ preinstall:
 clean: CMakeFiles/dsa.dir/clean
 clean: CMakeFiles/bit_countSetBits.dir/clean
 clean: CMakeFiles/bit_swapTwoNums.dir/clean
+clean: CMakeFiles/bit_numBitsSwap.dir/clean
 
 .PHONY : clean
 
@@ -98,7 +100,7 @@ clean: CMakeFiles/bit_swapTwoNums.dir/clean
 CMakeFiles/dsa.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target dsa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target dsa"
 .PHONY : CMakeFiles/dsa.dir/all
 
 # Build rule for subdir invocation for target.
@@ -152,7 +154,7 @@ CMakeFiles/bit_countSetBits.dir/clean:
 CMakeFiles/bit_swapTwoNums.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target bit_swapTwoNums"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target bit_swapTwoNums"
 .PHONY : CMakeFiles/bit_swapTwoNums.dir/all
 
 # Build rule for subdir invocation for target.
@@ -171,6 +173,33 @@ bit_swapTwoNums: CMakeFiles/bit_swapTwoNums.dir/rule
 CMakeFiles/bit_swapTwoNums.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/clean
 .PHONY : CMakeFiles/bit_swapTwoNums.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bit_numBitsSwap.dir
+
+# All Build rule for target.
+CMakeFiles/bit_numBitsSwap.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target bit_numBitsSwap"
+.PHONY : CMakeFiles/bit_numBitsSwap.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bit_numBitsSwap.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bit_numBitsSwap.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bsankt/CLionProjects/dsa/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/bit_numBitsSwap.dir/rule
+
+# Convenience name for target.
+bit_numBitsSwap: CMakeFiles/bit_numBitsSwap.dir/rule
+
+.PHONY : bit_numBitsSwap
+
+# clean rule for target.
+CMakeFiles/bit_numBitsSwap.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/clean
+.PHONY : CMakeFiles/bit_numBitsSwap.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

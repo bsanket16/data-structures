@@ -169,6 +169,19 @@ bit_swapTwoNums/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_swapTwoNums.dir/build.make CMakeFiles/bit_swapTwoNums.dir/build
 .PHONY : bit_swapTwoNums/fast
 
+#=============================================================================
+# Target rules for targets named bit_numBitsSwap
+
+# Build rule for target.
+bit_numBitsSwap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bit_numBitsSwap
+.PHONY : bit_numBitsSwap
+
+# fast build rule for target.
+bit_numBitsSwap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/build
+.PHONY : bit_numBitsSwap/fast
+
 bit_manipulation/count_set_bits.o: bit_manipulation/count_set_bits.cpp.o
 
 .PHONY : bit_manipulation/count_set_bits.o
@@ -195,6 +208,33 @@ bit_manipulation/count_set_bits.s: bit_manipulation/count_set_bits.cpp.s
 bit_manipulation/count_set_bits.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/bit_manipulation/count_set_bits.cpp.s
 .PHONY : bit_manipulation/count_set_bits.cpp.s
+
+bit_manipulation/num_bits_swap.o: bit_manipulation/num_bits_swap.cpp.o
+
+.PHONY : bit_manipulation/num_bits_swap.o
+
+# target to build an object file
+bit_manipulation/num_bits_swap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/bit_manipulation/num_bits_swap.cpp.o
+.PHONY : bit_manipulation/num_bits_swap.cpp.o
+
+bit_manipulation/num_bits_swap.i: bit_manipulation/num_bits_swap.cpp.i
+
+.PHONY : bit_manipulation/num_bits_swap.i
+
+# target to preprocess a source file
+bit_manipulation/num_bits_swap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/bit_manipulation/num_bits_swap.cpp.i
+.PHONY : bit_manipulation/num_bits_swap.cpp.i
+
+bit_manipulation/num_bits_swap.s: bit_manipulation/num_bits_swap.cpp.s
+
+.PHONY : bit_manipulation/num_bits_swap.s
+
+# target to generate assembly for a file
+bit_manipulation/num_bits_swap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_numBitsSwap.dir/build.make CMakeFiles/bit_numBitsSwap.dir/bit_manipulation/num_bits_swap.cpp.s
+.PHONY : bit_manipulation/num_bits_swap.cpp.s
 
 bit_manipulation/swap_two_num.o: bit_manipulation/swap_two_num.cpp.o
 
@@ -259,11 +299,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bit_countSetBits"
+	@echo "... bit_numBitsSwap"
 	@echo "... bit_swapTwoNums"
 	@echo "... dsa"
 	@echo "... bit_manipulation/count_set_bits.o"
 	@echo "... bit_manipulation/count_set_bits.i"
 	@echo "... bit_manipulation/count_set_bits.s"
+	@echo "... bit_manipulation/num_bits_swap.o"
+	@echo "... bit_manipulation/num_bits_swap.i"
+	@echo "... bit_manipulation/num_bits_swap.s"
 	@echo "... bit_manipulation/swap_two_num.o"
 	@echo "... bit_manipulation/swap_two_num.i"
 	@echo "... bit_manipulation/swap_two_num.s"
