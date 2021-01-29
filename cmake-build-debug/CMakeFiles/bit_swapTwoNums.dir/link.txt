@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/bit_swapTwoNums.dir/bit_manipulation/swap_two_num.cpp.o  -o bit_swapTwoNums 
