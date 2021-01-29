@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dsa.dir/bit_maniplation/count_set_bits_in_an_integer.cpp.o"
   "CMakeFiles/dsa.dir/main.cpp.o"
   "dsa"
   "dsa.pdb"

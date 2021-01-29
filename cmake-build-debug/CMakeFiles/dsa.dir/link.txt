@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/dsa.dir/main.cpp.o CMakeFiles/dsa.dir/bit_maniplation/count_set_bits_in_an_integer.cpp.o  -o dsa 
+/usr/bin/c++  -g   CMakeFiles/dsa.dir/main.cpp.o  -o dsa 

@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /home/bsankt/CLionProjects/dsa/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/bsankt/Downloads/clion-2020.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/bsankt/Downloads/clion-2020.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bit_countSetBits
+
+# Build rule for target.
+bit_countSetBits: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bit_countSetBits
+.PHONY : bit_countSetBits
+
+# fast build rule for target.
+bit_countSetBits/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/build
+.PHONY : bit_countSetBits/fast
+
+#=============================================================================
 # Target rules for targets named dsa
 
 # Build rule for target.
@@ -143,32 +156,32 @@ dsa/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
 .PHONY : dsa/fast
 
-bit_maniplation/count_set_bits_in_an_integer.o: bit_maniplation/count_set_bits_in_an_integer.cpp.o
+bit_manipulation/count_set_bits.o: bit_manipulation/count_set_bits.cpp.o
 
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.o
+.PHONY : bit_manipulation/count_set_bits.o
 
 # target to build an object file
-bit_maniplation/count_set_bits_in_an_integer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/bit_maniplation/count_set_bits_in_an_integer.cpp.o
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.cpp.o
+bit_manipulation/count_set_bits.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/bit_manipulation/count_set_bits.cpp.o
+.PHONY : bit_manipulation/count_set_bits.cpp.o
 
-bit_maniplation/count_set_bits_in_an_integer.i: bit_maniplation/count_set_bits_in_an_integer.cpp.i
+bit_manipulation/count_set_bits.i: bit_manipulation/count_set_bits.cpp.i
 
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.i
+.PHONY : bit_manipulation/count_set_bits.i
 
 # target to preprocess a source file
-bit_maniplation/count_set_bits_in_an_integer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/bit_maniplation/count_set_bits_in_an_integer.cpp.i
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.cpp.i
+bit_manipulation/count_set_bits.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/bit_manipulation/count_set_bits.cpp.i
+.PHONY : bit_manipulation/count_set_bits.cpp.i
 
-bit_maniplation/count_set_bits_in_an_integer.s: bit_maniplation/count_set_bits_in_an_integer.cpp.s
+bit_manipulation/count_set_bits.s: bit_manipulation/count_set_bits.cpp.s
 
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.s
+.PHONY : bit_manipulation/count_set_bits.s
 
 # target to generate assembly for a file
-bit_maniplation/count_set_bits_in_an_integer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/bit_maniplation/count_set_bits_in_an_integer.cpp.s
-.PHONY : bit_maniplation/count_set_bits_in_an_integer.cpp.s
+bit_manipulation/count_set_bits.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bit_countSetBits.dir/build.make CMakeFiles/bit_countSetBits.dir/bit_manipulation/count_set_bits.cpp.s
+.PHONY : bit_manipulation/count_set_bits.cpp.s
 
 main.o: main.cpp.o
 
@@ -205,10 +218,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... bit_countSetBits"
 	@echo "... dsa"
-	@echo "... bit_maniplation/count_set_bits_in_an_integer.o"
-	@echo "... bit_maniplation/count_set_bits_in_an_integer.i"
-	@echo "... bit_maniplation/count_set_bits_in_an_integer.s"
+	@echo "... bit_manipulation/count_set_bits.o"
+	@echo "... bit_manipulation/count_set_bits.i"
+	@echo "... bit_manipulation/count_set_bits.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
