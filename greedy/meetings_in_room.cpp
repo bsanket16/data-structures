@@ -2,9 +2,9 @@
 using namespace std;
 
 struct meeting {
-    [[maybe_unused]] int start;
-    [[maybe_unused]] int end;
-    [[maybe_unused]] int pos;
+    int start;
+    int end;
+    int pos;
 };
 
 bool comp (struct meeting m1, meeting m2) {
